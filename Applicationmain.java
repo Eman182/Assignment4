@@ -5,6 +5,11 @@ import eg.edu.alexu.csd.datastructure.linkedList.cs18010431Eman_Katrin.Applicati
 public class Applicationmain {
 
 	public static void main(String[] args) throws RuntimeException {
+	/*	class StockTrading{
+			   public String getDescription(){
+			   return "StockTrading";
+			  }
+			}*/
 		Application application=new Application();
 		Scanner s=new Scanner(System.in);
 		int i,x=0,j;
@@ -267,7 +272,7 @@ public class Applicationmain {
 				System.out.println("Enter a floating point constant :");
 				float a =s.nextFloat();
 				float result =application.evaluatePolynomial(poly, a);
-				System.out.printf("Value of %c at %f is: %f",poly,a,result);
+				System.out.print("Value of "+poly+" at "+a+" is: "+result);
 				System.out.println();
 				
 				
