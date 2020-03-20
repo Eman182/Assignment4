@@ -196,7 +196,7 @@ public class Application implements IPolynomialSolver{
     		add_subtract('C');
     	}
     }
-    public String print(char poly) {
+     public String print(char poly) {
 		String  s="";  String  coeff;  String  exp;   String po="^"; String sign="+";
     	if(poly=='A'&&A.size!=0) {
     		Point n=(Point) A.get(0);
@@ -215,8 +215,11 @@ public class Application implements IPolynomialSolver{
 			if(n.y==0&&n.x!=0) {
 				s=s+coeff;
 			}
-			else if(n.x==0) {
+			else if(n.x==0&&A.size()!=1) {
 				s=s;
+			}
+			else if(n.x==0&&A.size()==1) {
+				s=""+'0';
 			}
 			else {
 				s=s+coeff+"x"+po+exp;
@@ -242,8 +245,11 @@ public class Application implements IPolynomialSolver{
 				if(n.y==0&&n.x!=0) {
 					s=s+sign+coeff;
 				}
-				else if(n.x==0) {
+				else if(n.x==0&&A.size()!=1) {
 					s=s;
+				}
+				else if(n.x==0&&A.size()==1) {
+					s=""+'0';
 				}
 				else {
 					s=s+sign+coeff+"x"+po+exp;
@@ -268,8 +274,11 @@ public class Application implements IPolynomialSolver{
 			if(n.y==0&&n.x!=0) {
 				s=s+coeff;
 			}
-			else if(n.x==0) {
+			else if(n.x==0&&B.size()!=1) {
 				s=s;
+			}
+			else if(n.x==0&&B.size()==1) {
+				s=""+'0';
 			}
 			else {
 				s=s+coeff+"x"+po+exp;
@@ -295,8 +304,11 @@ public class Application implements IPolynomialSolver{
 				if(n.y==0&&n.x!=0) {
 					s=s+sign+coeff;
 				}
-				else if(n.x==0) {
+				else if(n.x==0&&B.size()!=1) {
 					s=s;
+				}
+				else if(n.x==0&&B.size()==1) {
+					s=""+'0';
 				}
 				else {
 					s=s+sign+coeff+"x"+po+exp;
@@ -321,8 +333,11 @@ public class Application implements IPolynomialSolver{
 			if(n.y==0&&n.x!=0) {
 				s=s+coeff;
 			}
-			else if(n.x==0) {
+			else if(n.x==0&&C.size()!=1) {
 				s=s;
+			}
+			else if(n.x==0&&C.size()==1) {
+				s=""+'0';
 			}
 			else {
 				s=s+coeff+"x"+po+exp;
@@ -348,8 +363,11 @@ public class Application implements IPolynomialSolver{
 				if(n.y==0&&n.x!=0) {
 					s=s+sign+coeff;
 				}
-				else if(n.x==0) {
+				else if(n.x==0&&C.size()!=1) {
 					s=s;
+				}
+				else if(n.x==0&&C.size()==1) {
+					s=""+'0';
 				}
 				else {
 					s=s+sign+coeff+"x"+po+exp;
@@ -374,8 +392,11 @@ public class Application implements IPolynomialSolver{
 			if(n.y==0&&n.x!=0) {
 				s=s+coeff;
 			}
-			else if(n.x==0) {
+			else if(n.x==0&&R.size()!=1) {
 				s=s;
+			}
+			else if(n.x==0&&R.size()==1) {
+				s=""+'0';
 			}
 			else {
 				s=s+coeff+"x"+po+exp;
@@ -401,8 +422,11 @@ public class Application implements IPolynomialSolver{
 				if(n.y==0&&n.x!=0) {
 					s=s+sign+coeff;
 				}
-				else if(n.x==0) {
+				else if(n.x==0&&R.size()!=1) {
 					s=s;
+				}
+				else if(n.x==0&&R.size()==1) {
+					s=""+'0';
 				}
 				else {
 					s=s+sign+coeff+"x"+po+exp;
