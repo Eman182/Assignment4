@@ -1,16 +1,10 @@
 package eg.edu.alexu.csd.datastructure.linkedList.UIApplication;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import eg.edu.alexu.csd.datastructure.linkedList.cs18010431Eman_Katrin.Application;
 public class Applicationmain {
 
 	public static void main(String[] args) throws RuntimeException {
-	/*	class StockTrading{
-			   public String getDescription(){
-			   return "StockTrading";
-			  }
-			}*/
 		Application application=new Application();
 		Scanner s=new Scanner(System.in);
 		int i,x=0,j;
@@ -38,12 +32,8 @@ public class Applicationmain {
 			}
 			else if(s.hasNextLine()) {
 				s.next();
-				try {
 				x=s.nextInt();
-				}
-				catch(InputMismatchException m){
-					System.out.println(m.getMessage());
-				}
+				
 			}
 			//take inputs according to choice and check for validation
 			if(x==2||x==6||x==7) {
@@ -243,9 +233,9 @@ public class Applicationmain {
 				
 				terms = application.add(poly1, poly2);
 				System.out.print("Result set in R: ");
-				System.out.printf("(%d ,%d)", terms[0][0],terms[0][1]);
+				System.out.print("("+terms[0][0]+","+terms[0][1]+")");
 				for(i=1;i<terms.length;i++) {
-					System.out.printf(", (%d ,%d)", terms[i][0],terms[i][1]);
+					System.out.print(",("+terms[i][0]+","+terms[i][1]+")");
 				}
 				System.out.println();
 				
@@ -254,9 +244,9 @@ public class Applicationmain {
 				
 				terms = application.subtract(poly1, poly2);
 				System.out.print("Result set in R: ");
-				System.out.printf("(%d ,%d)", terms[0][0],terms[0][1]);
+				System.out.print("("+terms[0][0]+","+terms[0][1]+")");
 				for(i=1;i<terms.length;i++) {
-					System.out.printf(", (%d ,%d)", terms[i][0],terms[i][1]);
+					System.out.print(",("+terms[i][0]+","+terms[i][1]+")");
 				}
 				System.out.println();
 				
@@ -265,9 +255,9 @@ public class Applicationmain {
 
 				terms = application.multiply(poly1, poly2);
 				System.out.print("Result set in R: ");
-				System.out.printf("(%d ,%d)", terms[0][0],terms[0][1]);
+				System.out.print("("+terms[0][0]+","+terms[0][1]+")");
 				for(i=1;i<terms.length;i++) {
-					System.out.printf(", (%d ,%d)", terms[i][0],terms[i][1]);
+					System.out.print(",("+terms[i][0]+","+terms[i][1]+")");
 				}
 				System.out.println();
 				
@@ -277,7 +267,7 @@ public class Applicationmain {
 				System.out.println("Enter a floating point constant :");
 				float a =s.nextFloat();
 				float result =application.evaluatePolynomial(poly, a);
-				System.out.printf("Value of %c at %f is: ",poly,result);
+				System.out.printf("Value of %c at %f is: %f",poly,a,result);
 				System.out.println();
 				
 				
